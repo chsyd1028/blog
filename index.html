@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+
+	<!-- Site title
+   ================================================== -->
+	<title>程杉耘朵 - 个人主页</title>
+
+	<!-- Bootstrap CSS
+   ================================================== -->
+	<link rel="stylesheet" href="http://pc9t1l6wc.bkt.clouddn.com/css/bootstrap.min.css">
+
+	<!-- Animate CSS
+   ================================================== -->
+	<link rel="stylesheet" href="http://pc9t1l6wc.bkt.clouddn.com/css/animate.min.css">
+
+	<!-- Font Icons CSS
+   ================================================== -->
+	<link rel="stylesheet" href="http://pc9t1l6wc.bkt.clouddn.com/css/font-awesome.min.css">
+	<link rel="stylesheet" href="http://pc9t1l6wc.bkt.clouddn.com/css/ionicons.min.css">
+
+	<!-- Main CSS
+   ================================================== -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Google web font 
+   ================================================== -->
+</head>
+<body>
+
+
+<!-- Preloader section
+================================================== -->
+<div class="preloader">
+
+	<div class="sk-spinner sk-spinner-pulse"></div>
+
+</div>
+
+<!-- Navigation section
+================================================== -->
+<div class="nav-container">
+   <nav class="nav-inner transparent">
+
+      <div class="navbar">
+         <div class="container">
+            <div class="row">
+
+              <div class="brand">
+                <a href="index.html">程杉耘朵</a>
+              </div>
+
+              <div class="navicon">
+                <div class="menu-container">
+
+                  <div class="circle dark inline">
+                    <i class="icon ion-navicon"></i>
+                  </div>
+
+                  <div class="list-menu">
+                    <i class="icon ion-close-round close-iframe"></i>
+                    <div class="intro-inner">
+                      <ul id="nav-menu">
+                        <li><a href="index.html">主页</a></li>
+                         <li><a href="project.html">项目</a></li>
+                         <li><a href="me.html">简历</a></li>
+                        <li><a href="photo.html">游历</a></li>
+                        <li><a href="contact.html">联系</a></li>
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+         </div>
+      </div>
+
+   </nav>
+</div>
+
+
+<!-- Header section
+================================================== -->
+<section id="header" class="header-one">
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8">
+          <div class="header-thumb">
+              <h1 class="wow fadeIn" data-wow-delay="1.0s">你好，我叫程杉耘朵</h1>
+              <h3 class="wow fadeInUp" data-wow-delay="1.5s">你没看错，我姓程，名叫杉耘朵</h3>
+          </div>
+			</div>
+
+		</div>
+	</div>		
+</section>
+
+
+<!-- Portfolio section
+================================================== -->
+<section id="portfolio">
+    <div id="project">
+       <div class="container">
+          <div class="row">
+
+             <div class="col-md-12 col-sm-12">
+
+                    <!--iso section-->
+                   <div class="iso-section wow fadeInUp" data-wow-delay="2.6s">
+
+                       <ul class="filter-wrapper clearfix">
+                               <li><a href="#" class="opc-main-bg" data-filter=".project">项目</a></li>
+                               <li><a href="#" class="opc-main-bg" data-filter=".me">简历</a></li>
+                               <li><a href="#" class="opc-main-bg" data-filter=".photo">游历</a></li>
+                               <li><a href="#" class="opc-main-bg" data-filter=".contact">联系</a></li>
+                            </ul>
+
+                       <!-- iso box section -->
+                       <div class="iso-box-section wow fadeInUp" data-wow-delay="1s">
+                               <div class="iso-box-wrapper col4-iso-box">
+
+                                   <!--遍历项目列表-->
+                                   <div class="iso-box template project col-md-4 col-sm-6" v-for="(item,index) in projectList" v-if="index<3">
+                                       <div class="portfolio-thumb">
+                                           <img v-bind:src="imageUrl + item.img" class="img-responsive" alt="Portfolio">
+                                           <div class="portfolio-overlay">
+                                               <div class="portfolio-item">
+                                                   <a v-bind:href="'single-project.html?id=' + item.id"><i class="fa fa-link"></i></a>
+                                                   <h2>{{item.name}}</h2>
+                                               </div>
+                                           </div>
+                                       </div>
+                                   </div>
+
+                                   <!--个人资料相关-->
+                                  <div class="iso-box me branding col-md-4 col-sm-6" v-for="(item, index) in meList" v-if="index<3">
+                                     <div class="portfolio-thumb">
+                                        <img v-bind:src="imageUrl + item.img" class="img-responsive" alt="Portfolio">
+                                           <div class="portfolio-overlay">
+                                              <div class="portfolio-item">
+                                                    <a v-bind:href="item.url"><i class="fa fa-link"></i></a>
+                                                    <h2>{{item.title}}</h2>
+                                                 </div>
+                                           </div>
+                                     </div>
+                                  </div>
+
+                                   <!--游历展示-->
+                                  <div class="iso-box photo template col-md-4 col-sm-6" v-for="(item,index) in photoList" v-if="index<3">
+                                     <div class="portfolio-thumb">
+                                        <img v-bind:src="imageUrl + item.img" class="img-responsive" alt="Portfolio">
+                                           <div class="portfolio-overlay">
+                                              <div class="portfolio-item">
+                                                    <a><i class="fa fa-link"></i></a>
+                                                    <h2>{{item.name}}</h2>
+                                                 </div>
+                                           </div>
+                                     </div>
+                                  </div>
+
+                                   <!--联系自己相关信息-->
+                                  <div class="iso-box contact branding col-md-4 col-sm-6">
+                                     <div class="portfolio-thumb">
+                                        <img src="http://pc9t1l6wc.bkt.clouddn.com/images/contact/contact-1.jpg" class="img-responsive" alt="Portfolio">
+                                           <div class="portfolio-overlay">
+                                              <div class="portfolio-item">
+                                                    <a href="#" data-toggle="modal" data-target="#aboutMe"><i class="fa fa-link"></i></a>
+                                                    <h2>联系方式</h2>
+                                                 </div>
+                                           </div>
+                                     </div>
+                                  </div>
+
+                                   <div class="iso-box contact branding col-md-4 col-sm-6">
+                                       <div class="portfolio-thumb">
+                                           <img src="http://pc9t1l6wc.bkt.clouddn.com/images/contact/contact-2.jpg" class="img-responsive" alt="Portfolio">
+                                           <div class="portfolio-overlay">
+                                               <div class="portfolio-item">
+                                                   <a href="contact.html"><i class="fa fa-link"></i></a>
+                                                   <h2>发信息</h2>
+                                               </div>
+                                           </div>
+                                       </div>
+                                   </div>
+
+                                </div>
+                            </div>
+
+                       <div class="iso-section wow fadeInUp" data-wow-delay="1s">
+                           <a onclick="vm.moveTo()" class="btn btn-default">更多</a>
+                       </div>
+
+
+                   </div>
+
+             </div>
+
+          </div>
+       </div>
+    </div>
+</section>
+
+<!-- Footer section
+================================================== -->
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-sm-12">
+				<p class="wow fadeInUp"  data-wow-delay="0.3s">
+                    结尾我该写点啥。
+                </p>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<!-- 模态框（Modal） -->
+<div class="modal fade" id="aboutMe" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">联系方式</h4>
+            </div>
+            <div class="modal-body">
+                <div style="margin: 10px"><h3>本人程序媛一枚，如果有技术讨论或者工作机会可以通过以下方式联系我。</h3></div>
+
+                <!-- 联系方式 -->
+                <ul id="contact_ul">
+                    <li class="fa fa-github"><a href="https://github.com/chsyd1028" target="_blank">https://github.com/chsyd1028</a ></li>
+                    <li class="fa fa-pencil-square-o"><a href="http://blog.csdn.net/chsyd1028" target="_blank">http://blog.csdn.net/chsyd1028</a ></li>
+                    <li class="fa fa-envelope-o"><a>chengshanyunduo@foxmail.com</a ></li>
+                    <li class="fa fa-qq"><a>420120577</a ></li>
+                    <li class="fa fa-wechat"><a>420120577</a ></li>
+                </ul>
+                
+                <div style="width: 100%; text-align: center"><img src="http://pc9t1l6wc.bkt.clouddn.com/images/contact/contact-wechat.jpeg" style="width: 120px;"></div>
+            </div>
+
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+
+<!-- Javascript 
+================================================== -->
+<script src="http://pc9t1l6wc.bkt.clouddn.com/js/jquery.js"></script>
+<script src="http://pc9t1l6wc.bkt.clouddn.com/js/bootstrap.min.js"></script>
+<script src="http://pc9t1l6wc.bkt.clouddn.com/js/vue.js"></script>
+<script src="http://pc9t1l6wc.bkt.clouddn.com/js/isotope.js"></script>
+<script src="http://pc9t1l6wc.bkt.clouddn.com/js/imagesloaded.min.js"></script>
+<script src="http://pc9t1l6wc.bkt.clouddn.com/js/wow.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/custom.js"></script>
+<script src="js/viewjs/index.js"></script>
+
+
+
+</body>
+</html>

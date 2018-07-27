@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+
+	<!-- Site title
+   ================================================== -->
+	<title>程杉耘朵 - 项目</title>
+
+	<!-- Bootstrap CSS
+   ================================================== -->
+	<link rel="stylesheet" href="http://pc9t1l6wc.bkt.clouddn.com/css/bootstrap.min.css">
+
+	<!-- Animate CSS
+   ================================================== -->
+	<link rel="stylesheet" href="http://pc9t1l6wc.bkt.clouddn.com/css/animate.min.css">
+
+	<!-- Font Icons CSS
+   ================================================== -->
+	<link rel="stylesheet" href="http://pc9t1l6wc.bkt.clouddn.com/css/font-awesome.min.css">
+	<link rel="stylesheet" href="http://pc9t1l6wc.bkt.clouddn.com/css/ionicons.min.css">
+
+	<!-- Main CSS
+   ================================================== -->
+	<link rel="stylesheet" href="css/style.css">
+	
+</head>
+<body>
+
+
+<!-- Preloader section
+================================================== -->
+<div class="preloader">
+
+	<div class="sk-spinner sk-spinner-pulse"></div>
+
+</div>
+
+
+<!-- Navigation section
+================================================== -->
+<div class="nav-container">
+   <nav class="nav-inner transparent">
+
+      <div class="navbar">
+         <div class="container">
+            <div class="row">
+
+              <div class="brand">
+                <a href="index.html">程杉耘朵</a>
+              </div>
+
+              <div class="navicon">
+                <div class="menu-container">
+
+                  <div class="circle dark inline">
+                    <i class="icon ion-navicon"></i>
+                  </div>
+
+                  <div class="list-menu">
+                    <i class="icon ion-close-round close-iframe"></i>
+                    <div class="intro-inner">
+                        <ul id="nav-menu">
+                            <li><a href="index.html">主页</a></li>
+                            <li><a href="project.html">项目</a></li>
+                            <li><a href="me.html">简历</a></li>
+                            <li><a href="photo.html">游历</a></li>
+                            <li><a href="contact.html">联系</a></li>
+                        </ul>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+         </div>
+      </div>
+
+   </nav>
+</div>
+
+
+<!-- Header section
+================================================== -->
+<section id="header" class="header-five">
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8">
+          <div class="header-thumb">
+              <h1 class="wow fadeIn" data-wow-delay="0.6s">项目</h1>
+              <h3 class="wow fadeInUp" data-wow-delay="0.9s">Accumulation of learning process</h3>
+          </div>
+			</div>
+
+		</div>
+	</div>		
+</section>
+
+
+<!-- Blog section
+================================================== -->
+<section id="blog">
+	<div id="project">
+   		<div class="container">
+      <div class="row">
+
+         <!--<div class="wow fadeInUp col-md-6 col-sm-6" data-wow-delay="1s">-->
+         	  <!--<div class="blog-thumb">-->
+         		   <!--<a href="single-post.html"><img src="images/blog-img1.jpg" class="img-responsive" alt="Blog"></a>-->
+         		   <!--<a href="single-post.html"><h1>Flying the Clouds</h1></a>-->
+         		     <!--<div class="post-format">-->
+						        <!--<span>By <a href="#">Frank Wang</a></span>-->
+						        <!--<span><i class="fa fa-date"></i> 5 June 2016, Sunday</span>-->
+					       <!--</div>-->
+         		     <!--<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Dolore magna aliquam erat volutpat sit amet, consectetuer adipiscing elit, sed diam nonumm.</p>-->
+         		     <!--<a href="single-post.html" class="btn btn-default">Full Article</a>-->
+         	    <!--</div>-->
+		    <!--</div>-->
+
+		    <!--<div class="wow fadeInUp col-md-6 col-sm-6" data-wow-delay="1.6s">-->
+         	  <!--<div class="blog-thumb">-->
+         		   <!--<a href="single-post.html"><img src="images/blog-img2.jpg" class="img-responsive" alt="Blog"></a>-->
+         		   <!--<a href="single-post.html"><h1>Walk in the Moon</h1></a>-->
+         			    <!--<div class="post-format">-->
+						        <!--<span>By <a href="#">Elon Musk</a></span>-->
+						        <!--<span><i class="fa fa-date"></i> 4 June 2016, Saturday</span>-->
+					       <!--</div>-->
+         		     <!--<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Dolore magna aliquam erat volutpat sit amet, consectetuer adipiscing elit, sed diam nonumm.</p>-->
+         		     <!--<a href="single-post.html" class="btn btn-default">Read More</a>-->
+         	  <!--</div>-->
+		    <!--</div>-->
+
+        
+
+		    <div class="wow fadeInUp col-md-4 col-sm-4" data-wow-delay="1.5s" v-for="project in projectList">
+         	  <div class="blog-thumb">
+         		   <a ><img v-bind:src="imageUrl + project.img" class="img-responsive" alt="Blog"></a>
+         		   <a ><h1>{{project.name}}</h1></a>
+         		     <p>{{project.describe}}</p>
+         		     <a href="single-project.html?id=1" class="btn btn-default">详情</a>
+         	  </div>
+		    </div>
+
+
+        <!--<div class="wow fadeInUp col-md-3 col-sm-3" data-wow-delay="2.4s">-->
+            <!--<div class="blog-thumb">-->
+               <!--<a href="single-post.html"><img src="images/blog-img6.jpg" class="img-responsive" alt="Blog"></a>-->
+               <!--<a href="single-post.html"><h1>Mountain</h1></a>-->
+                  <!--<div class="post-format">-->
+                    <!--<span>By <a href="#">Linda</a></span>-->
+                    <!--<span><i class="fa fa-date"></i> 31 May 2016, Tuesday</span>-->
+                 <!--</div>-->
+                 <!--<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.</p>-->
+                 <!--<a href="single-post.html" class="btn btn-default">Read More</a>-->
+            <!--</div>-->
+        <!--</div>-->
+
+        <!--<div class="wow fadeInUp col-md-3 col-sm-3" data-wow-delay="1.5s">-->
+            <!--<div class="blog-thumb">-->
+               <!--<a href="single-post.html"><img src="images/blog-img7.jpg" class="img-responsive" alt="Blog"></a>-->
+               <!--<a href="single-post.html"><h1>Cloud</h1></a>-->
+                  <!--<div class="post-format">-->
+                    <!--<span>By <a href="#">Bill Gates</a></span>-->
+                    <!--<span><i class="fa fa-date"></i> 30 May 2016, Monday</span>-->
+                 <!--</div>-->
+                 <!--<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.</p>-->
+                 <!--<a href="single-post.html" class="btn btn-default">Details</a>-->
+            <!--</div>-->
+        <!--</div>-->
+
+        <!--<div class="wow fadeInUp col-md-3 col-sm-3" data-wow-delay="1s">-->
+            <!--<div class="blog-thumb">-->
+               <!--<a href="single-post.html"><img src="images/blog-img8.jpg" class="img-responsive" alt="Blog"></a>-->
+               <!--<a href="single-post.html"><h1>Blue Sky</h1></a>-->
+                  <!--<div class="post-format">-->
+                    <!--<span>By <a href="#">Elon Musk</a></span>-->
+                    <!--<span><i class="fa fa-date"></i> 29 May 2016, Sunday</span>-->
+                 <!--</div>-->
+                 <!--<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.</p>-->
+                 <!--<a href="single-post.html" class="btn btn-default">Read More</a>-->
+            <!--</div>-->
+        <!--</div>-->
+
+        <!--<div class="wow fadeInUp col-md-3 col-sm-3" data-wow-delay="1.3s">-->
+            <!--<div class="blog-thumb">-->
+               <!--<a href="single-post.html"><img src="images/blog-img9.jpg" class="img-responsive" alt="Blog"></a>-->
+               <!--<a href="single-post.html"><h1>Forest</h1></a>-->
+                  <!--<div class="post-format">-->
+                    <!--<span>By <a href="#">Jack Ma</a></span>-->
+                    <!--<span><i class="fa fa-date"></i> 28 May 2016, Saturday</span>-->
+                 <!--</div>-->
+                 <!--<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.</p>-->
+                 <!--<a href="single-post.html" class="btn btn-default">Details</a>-->
+            <!--</div>-->
+        <!--</div>-->
+        
+        <!--<div class="wow fadeInUp col-md-12 col-sm-12" data-wow-delay="1.3s">-->
+          <!--<h1>Interdum et malesuada fames</h1>-->
+          <!--<p>Sed quis laoreet purus, a luctus ligula. Suspendisse nec urna a dolor sodales venenatis. Donec et sem quam. Fusce faucibus neque sit amet arcu auctor tincidunt. Etiam feugiat nibh orci, quis sagittis velit pretium ac. Suspendisse egestas ex a dolor dictum gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sagittis urna id odio consequat fringilla.</p>-->
+          <!--<p>Integer eu rhoncus libero. Nulla dignissim laoreet eros quis interdum. Proin ut placerat dui, eget vehicula ipsum. Mauris id molestie eros. Vestibulum fringilla dui nunc, vitae euismod ligula consectetur eget. Sed accumsan, ipsum in scelerisque euismod, nisi quam placerat urna, ac porttitor augue sapien varius velit.</p>-->
+       <!--</div>-->
+
+      </div>
+   </div>
+	</div>
+</section>
+
+<!-- Footer section
+================================================== -->
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-sm-12">
+				<p class="wow fadeInUp"  data-wow-delay="0.3s">
+					结尾我该写点啥。
+				</p>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<!-- Javascript 
+================================================== -->
+<script src="http://pc9t1l6wc.bkt.clouddn.com/js/jquery.js"></script>
+<script src="http://pc9t1l6wc.bkt.clouddn.com/js/bootstrap.min.js"></script>
+<script src="http://pc9t1l6wc.bkt.clouddn.com/js/vue.js"></script>
+<script src="js/common.js"></script>
+<script src="js/viewjs/project.js"></script>
+<script src="http://pc9t1l6wc.bkt.clouddn.com/js/wow.min.js"></script>
+<script src="js/custom.js"></script>
+
+
+
+</body>
+</html>

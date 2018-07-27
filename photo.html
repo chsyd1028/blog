@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+
+	<!-- Site title
+   ================================================== -->
+	<title>程杉耘朵 - 游历</title>
+
+	<!-- Bootstrap CSS
+   ================================================== -->
+	<link rel="stylesheet" href="http://pc9t1l6wc.bkt.clouddn.com/css/bootstrap.min.css">
+
+	<!-- Animate CSS
+   ================================================== -->
+	<link rel="stylesheet" href="http://pc9t1l6wc.bkt.clouddn.com/css/animate.min.css">
+
+	<!-- Font Icons CSS
+   ================================================== -->
+	<link rel="stylesheet" href="http://pc9t1l6wc.bkt.clouddn.com/css/font-awesome.min.css">
+	<link rel="stylesheet" href="http://pc9t1l6wc.bkt.clouddn.com/css/ionicons.min.css">
+
+	<!-- Main CSS
+   ================================================== -->
+	<link rel="stylesheet" href="css/style.css">
+	
+</head>
+<body>
+
+
+<!-- Preloader section
+================================================== -->
+<div class="preloader">
+
+	<div class="sk-spinner sk-spinner-pulse"></div>
+
+</div>
+
+
+<!-- Navigation section
+================================================== -->
+<div class="nav-container">
+   <nav class="nav-inner transparent">
+
+      <div class="navbar">
+         <div class="container">
+            <div class="row">
+
+              <div class="brand">
+                <a href="index.html">程杉耘朵</a>
+              </div>
+
+              <div class="navicon">
+                <div class="menu-container">
+
+                  <div class="circle dark inline">
+                    <i class="icon ion-navicon"></i>
+                  </div>
+
+                  <div class="list-menu">
+                    <i class="icon ion-close-round close-iframe"></i>
+                    <div class="intro-inner">
+                        <ul id="nav-menu">
+                            <li><a href="index.html">主页</a></li>
+                            <li><a href="project.html">项目</a></li>
+                            <li><a href="me.html">简历</a></li>
+                            <li><a href="project.html">游历</a></li>
+                            <li><a href="contact.html">联系</a></li>
+                        </ul>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+         </div>
+      </div>
+
+   </nav>
+</div>
+
+
+<!-- Header section
+================================================== -->
+<section id="header" class="header-two">
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8">
+          <div class="header-thumb">
+              <h1 class="wow fadeIn" data-wow-delay="0.6s">游历</h1>
+              <h3 class="wow fadeInUp" data-wow-delay="0.9s">Where I've been to</h3>
+          </div>
+			</div>
+
+		</div>
+	</div>		
+</section>
+
+
+<!-- Blog section
+================================================== -->
+<section id="blog">
+    <div id="photo">
+        <div class="container">
+      <div class="row">
+
+        <div class="wow fadeInUp col-lg-3 col-md-4 col-sm-6 col-xs-12" data-wow-delay="1.4s" v-for="photo in photoList">
+            <div class="blog-thumb">
+               <a ><img v-bind:src="imageUrl + photo.img" class="img-responsive" style="height: 200px;" alt="Blog"></a>
+               <a ><h3>{{photo.name}}</h3></a>
+                  <div class="post-format">
+                    <span>{{formatDate(photo.date,'Y.m.d')}}</span>
+                 </div>
+                 <p style="height: 60px"><i class="fa fa-map-marker" aria-hidden="true"></i> {{photo.addr}}</p>
+                 <!--<a href="single-post.html" class="btn btn-default">Read More</a>-->
+            </div>
+        </div>
+
+      </div>
+   </div>
+    </div>
+</section>
+
+<!-- Footer section
+================================================== -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <p class="wow fadeInUp"  data-wow-delay="0.3s">
+                    结尾我该写点啥。
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Javascript 
+================================================== -->
+<script src="http://pc9t1l6wc.bkt.clouddn.com/js/jquery.js"></script>
+<script src="http://pc9t1l6wc.bkt.clouddn.com/js/bootstrap.min.js"></script>
+<script src="http://pc9t1l6wc.bkt.clouddn.com/js/vue.js"></script>
+<script src="http://pc9t1l6wc.bkt.clouddn.com/js/wow.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/viewjs/photo.js"></script>
+<script src="js/custom.js"></script>
+
+
+</body>
+</html>

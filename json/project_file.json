@@ -1,0 +1,42 @@
+[
+  {
+    "id" : 1,
+    "title" : "oa系统",
+    "EnglishHeadlines" : "Office automation system",
+    "content" : "    这是和男票一起写的一个小型oa系统，框架上使用了SpringBoot。。其他内容再写。",
+    "img" : [
+      {
+        "title" : "登陆",
+        "path" : "/images/project/oa/denglu.png"
+      },
+      {
+        "title" : "首页",
+        "path" : "/images/project/oa/shouye.png"
+      },
+      {
+        "title" : "人员",
+        "path" : "/images/project/oa/renyuan.png"
+      },
+      {
+        "title" : "监控",
+        "path" : "/images/project/oa/jiankong.png"
+      },
+      {
+        "title" : "系统日志",
+        "path" : "/images/project/oa/xitongrizhi.png"
+      }
+    ],
+    "url" : "http://www.tczmh.club/projectoa/index",
+    "date" : 1517414400000,
+    "cate" : "java",
+    "skill" : [
+      "SpringBoot",
+      "SpringMvc",
+      "Mybatis",
+      "Redis",
+      "Shiro",
+      "Vue",
+      "AmazeUi"
+    ]
+  }
+]
