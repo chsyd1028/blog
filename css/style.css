@@ -78,7 +78,7 @@ a:focus {
 }
 
 img {
-  width: 100%;
+
   max-width: 100%;
 }
 
@@ -441,10 +441,10 @@ a.icon {
   background: url('http://pc9t1l6wc.bkt.clouddn.com/images/common/header-3.png') no-repeat;
 }
 .header-four {
-  background: url('http://pc9t1l6wc.bkt.clouddn.com/images/common/header-4.jpeg') no-repeat;
+  background: url('http://pc9t1l6wc.bkt.clouddn.com/images/common/header-4-2.jpeg') no-repeat;
 }
 .header-five {
-  background: url('http://pc9t1l6wc.bkt.clouddn.com/images/common/header-5.jpeg') no-repeat;
+  background: url('http://pc9t1l6wc.bkt.clouddn.com/images/common/header-5-1.jpeg') no-repeat;
 }
 
 /* Portfolio section styles
@@ -597,6 +597,20 @@ a.icon {
   padding-top: 14px;
 }
 
+#single-project a {
+    color: #394a99;
+    font-weight: bold;
+}
+
+#single-project .btn {
+    border-radius: 0px;
+    padding: 10px 32px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 22px;
+    transition: all 0.4s ease-in-out;
+}
+
 /* about section styles
 /* ========================================== */
 #about {
@@ -616,6 +630,16 @@ a.icon {
 #about blockquote {
   letter-spacing: 2px;
   margin-top: 20px;
+}
+
+#aboutCenter ul{
+    margin-left: 40px;
+}
+#aboutCenter ul li{
+    margin: 10px;
+}
+#aboutCenter blockquote {
+    border-left:5px solid #00aaaa;
 }
 
 /* blog & single post section styles
@@ -656,6 +680,10 @@ a.icon {
   background: #111112;
   border-color: transparent;
   color: #ffffff;
+}
+
+#blog img{
+    width: 100%;
 }
 
 #single-post blockquote {

@@ -137,13 +137,27 @@
 		</div>
 
 		<div class="wow fadeInUp col-md-7 col-sm-7" data-wow-delay="2.6s">
-			<p>{{project.content}}</p>
+			<blockquote><h1>项目简介</h1></blockquote>
+			<p v-for="text in project.content">&nbsp;&nbsp;&nbsp;&nbsp;{{text}}</p>
+			<blockquote><h1>项目概况</h1></blockquote>
 			<div v-for="img in project.img">
 				<p><h3>{{img.title}} :</h3></p>
-				<p><img v-bind:src="imageUrl + img.path" class="img-responsive" alt="Single Project"></p>
+				<p><img v-bind:src="imageUrl + img.path" class="img-responsive  center-block" alt="Single Project"></p>
 			</div>
-			<p><h1>线上地址:</h1></p>
-			<p><a v-bind:href="project.url">{{project.url}}</a></p>
+			<blockquote v-if="project.url != null"><h1>线上地址</h1></blockquote>
+			<p><a v-bind:href="project.url" target="_blank">{{project.url}}</a></p>
+			<blockquote><h1>Git:</h1></blockquote>
+			<p><a v-bind:href="project.git" target="_blank">{{project.git}}</a></p>
+			<blockquote><h1>学习资料</h1></blockquote>
+			<p v-for="material in project.materials" >
+				{{material.title + "：" }}
+				<a v-bind:href="material.url" target="_blank">{{material.url}}</a>
+			</p>
+
+			<p style="margin-top: 30px;margin-bottom: 30px">
+				<a href="#" class="btn btn-default" onclick="javascrip :history.back(-1);" style="color: #111112">返回</a>
+			</p>
+
 		</div>
 
 
@@ -162,6 +176,8 @@
 				<p class="wow fadeInUp"  data-wow-delay="0.3s">
 					<img src="http://pc9t1l6wc.bkt.clouddn.com/images/common/footer.png" style="width: 630px">
 				</p>
+				<p>友情链接： <a href="http://tczmh.club/" target="_blank" title="tczmh - 个人博客">tczmh - 个人博客</a></p>
+
 			</div>
 		</div>
 	</div>

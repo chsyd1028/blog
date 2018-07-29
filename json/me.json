@@ -4,7 +4,7 @@
     "title" : "我的简历",
     "date" : 1532282613000,
     "url" : "my_resume.html",
-    "img" : "/images/me/me-1.jpeg",
+    "img" : "/images/me/my_resume.jpeg",
     "describe" : "包含我的简历，用于求职，页面内可以下载简历"
   },
   {
@@ -12,7 +12,7 @@
     "title" : "技能展示",
     "date" : 1532291971000,
     "url" : "skill_display.html",
-    "img" : "/images/me/me-2.png",
+    "img" : "/images/me/skill_display.jpeg",
     "describe" : "包含所会技能，技能熟练程度展示"
   }
 ]

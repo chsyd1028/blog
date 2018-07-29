@@ -94,7 +94,6 @@
 <section id="header" class="header-two">
 	<div class="container">
 		<div class="row">
-
 			<div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8">
           <div class="header-thumb">
               <h1 class="wow fadeIn" data-wow-delay="0.6s">项目</h1>
@@ -146,8 +145,8 @@
          	  <div class="blog-thumb">
          		   <a ><img v-bind:src="imageUrl + project.img" class="img-responsive" alt="Blog"></a>
          		   <a ><h1>{{project.name}}</h1></a>
-         		     <p>{{project.describe}}</p>
-         		     <a href="single-project.html?id=1" class="btn btn-default">详情</a>
+         		     <p style="height: 60px">{{project.describe}}</p>
+         		     <a v-bind:href="'single-project.html?id=' + project.id" class="btn btn-default">详情</a>
          	  </div>
 		    </div>
 
@@ -224,7 +223,9 @@
 				<p class="wow fadeInUp"  data-wow-delay="0.3s">
                     <img src="http://pc9t1l6wc.bkt.clouddn.com/images/common/footer.png" style="width: 630px">
 				</p>
-			</div>
+                <p>友情链接： <a href="http://tczmh.club/" target="_blank" title="tczmh - 个人博客">tczmh - 个人博客</a></p>
+
+            </div>
 		</div>
 	</div>
 </footer>

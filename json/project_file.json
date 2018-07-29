@@ -1,9 +1,91 @@
 [
   {
+    "id" : 3,
+    "title" : "微信订阅号：耘楼",
+    "EnglishHeadlines" : "WeChat subscription number",
+    "content" : [
+      "这是我申请的一个个人订阅号，没有进行认证，通过开发模式进行回复和菜单编辑等",
+      "由于没有认证，多数接口无法使用，因此部分功能在测试号可查。",
+      "微信的服务器地址需要使用外网的80端口，最初这部分我是使用的男票用花生壳搞得外网穿透，他是用一个小破手机做服务器，利用路由器进行外网穿透，具体内容他用蚂蚁笔记记下了，但是用他的小手机的缺点就是性能太差，我就使用了我自己的一台不用的笔记本作为服务器进行外网穿透。但是这样也有缺点，就是需要一直开机才可以一直访问。这一次，我们两个决定统一使用亚马逊aws服务器，这个服务器只要淘宝上不到十块钱买个VISA号，就可以免费用一年，没办法，穷人只能各种搞。"
+    ],
+    "img" : [
+      {
+        "title" : "公众号二维码",
+        "path" : "/images/project/wx/gongzhonghao.jpg"
+      },
+      {
+        "title" : "测试号二维码",
+        "path" : "/images/project/wx/ceshihao.png"
+      }
+    ],
+    "url" : null,
+    "git" : "https://github.com/chsyd1028/yunge-wechat.git",
+    "materials" : [
+      {
+        "title" : "慕课网——初始Java微信公众号开发",
+        "url" : "https://www.imooc.com/learn/368"
+      },
+      {
+        "title" : "慕课网——Java微信公众号开发进阶",
+        "url" : "https://www.imooc.com/learn/401"
+      },
+      {
+        "title" : "手机刷Linux变身树莓派个人建站",
+        "url" : "http://leanote.com/blog/post/5a7123b6ab644112a600056d"
+      }
+    ],
+    "date" : 1532852143000,
+    "cate" : "java",
+    "skill" : [
+      "Spring",
+      "微信开发"
+    ]
+  },
+  {
+    "id" : 2,
+    "title" : "影视搜索",
+    "EnglishHeadlines" : "Film and television search",
+    "content" : [
+      "本应用是为了学习《精通Spring MVC4》 一书第二章做的练习，书中例子是用推特的api调用数据，我们需要vpn比较麻烦，因此在网上找了一个免费的api。",
+      "这是一个不成熟的影视搜索，利用聚合的免费api（坑的一比的api）搜索电影的信息。由于是一个免费的api，限制有很多，比如说必须精确搜索电影名称，每天只能搜索规定的次数，查询的数据也是比较老的数据。但是是为了练习springmvc的项目，勉强可以用"
+    ],
+    "img" : [
+      {
+        "title" : "搜索界面",
+        "path" : "/images/project/movie/sousuo.png"
+      },
+      {
+        "title" : "搜索失败",
+        "path" : "/images/project/movie/shibai.png"
+      },
+      {
+        "title" : "搜索成功",
+        "path" : "/images/project/movie/chenggong.png"
+      }
+    ],
+    "url" : "http://csyd.xyz/movie",
+    "git" : "https://github.com/chsyd1028/master-spring-mvc.git",
+    "materials" : [
+      {
+        "title" : "精通Spring MVC4",
+        "url" : "https://book.douban.com/subject/27036365"
+      }
+    ],
+    "date" : 1532852143000,
+    "cate" : "java",
+    "skill" : [
+      "SpringBoot",
+      "SpringMvc"
+    ]
+  },
+  {
     "id" : 1,
     "title" : "oa系统",
     "EnglishHeadlines" : "Office automation system",
-    "content" : "    这是和男票一起写的一个小型oa系统，框架上使用了SpringBoot。。其他内容再写。",
+    "content" :[
+      "这个是男票的毕业设计，和男票一起搭建，编写。主要采用的是springboot + springmvc + mybatis + gradle + vue的框架。前端页面是用的AmazeUI的官方模板。",
+      "这里我主要学习应用的是shiro，在springboot下，所有的shiro分配都写在@Bean注解中，更简洁明了。"
+    ],
     "img" : [
       {
         "title" : "登陆",
@@ -27,7 +109,14 @@
       }
     ],
     "url" : "http://www.tczmh.club/projectoa/index",
-    "date" : 1517414400000,
+    "git" : "https://github.com/18121259693/projectoa.git",
+    "materials" : [
+      {
+        "title" : "尚硅谷Shrio教程",
+        "url" : "http://www.atguigu.com/download.shtml#Shiro"
+      }
+    ],
+    "date" : 1532852143000,
     "cate" : "java",
     "skill" : [
       "SpringBoot",
