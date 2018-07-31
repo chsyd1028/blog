@@ -162,9 +162,10 @@
                                         <img v-bind:src="imageUrl + item.img" class="img-responsive" alt="Portfolio">
                                            <div class="portfolio-overlay">
                                               <div class="portfolio-item">
-                                                    <a><i class="fa fa-link"></i></a>
-                                                    <h2>{{item.name}}</h2>
-                                                 </div>
+                                                  <a v-if="item.imgGroup.length != 0 && item.imgGroup != null" v-bind:href="'single-photo.html?id=' + item.id"><i class="fa fa-link"></i></a>
+                                                  <a v-else><i class="fa fa-link"></i></a>
+                                                  <h2>{{item.name}}</h2>
+                                              </div>
                                            </div>
                                      </div>
                                   </div>

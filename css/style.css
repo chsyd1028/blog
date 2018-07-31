@@ -612,6 +612,24 @@ a.icon {
     transition: all 0.4s ease-in-out;
 }
 
+#resume .btn {
+    border-radius: 0px;
+    padding: 10px 32px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 22px;
+    transition: all 0.4s ease-in-out;
+}
+
+#skills .btn {
+    border-radius: 0px;
+    padding: 10px 32px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 22px;
+    transition: all 0.4s ease-in-out;
+}
+
 /* about section styles
 /* ========================================== */
 #about {
@@ -649,6 +667,15 @@ a.icon {
 #single-post {
   padding-top: 4rem;
   padding-bottom: 6rem;
+}
+
+#single-post .btn {
+    border-radius: 0px;
+    padding: 10px 32px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 22px;
+    transition: all 0.4s ease-in-out;
 }
 
 #blog .blog-thumb {
