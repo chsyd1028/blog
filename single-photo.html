@@ -122,7 +122,7 @@
              <h4 class="media-heading">{{formatDate(photo.date, 'Y.m.d')}}</h4>
 
              <div>
-                <p v-for="desc in photo.describe">
+                <p v-if="photo.description != null && photo.description.length!=0" v-for="desc in photo.description">
                      &nbsp;&nbsp;&nbsp;&nbsp;{{desc}}
                 </p>
              </div>

@@ -31,7 +31,7 @@
     "name" : "南翔古猗园",
     "pinyin" : "nan xiang gu yi yuan",
     "addr" : "上海市-嘉定区-南翔镇沪宜公路218号",
-    "describe" : [
+    "description" : [
       "南翔古猗园在嘉定区，旁边有正宗的南翔小笼，据说是上海最正宗的南翔小笼，周围附近的小笼很多，据说只有这一家是最正宗的，最便宜的是三十一笼，我这大胃口都够吃了。",
       "古漪园内有一些仿古建筑，我去的时候正好是荷花展，有各种特别的荷花，不过还是荷花池中的好看。整个园区大小适宜，还碰到了一个导游解说，跟着后面听了一会，发现如果没有人讲真的不会知道那些历史，不过出来玩嘛，开心最重要。"
     ],
@@ -65,7 +65,7 @@
     "name" : "南翔老街",
     "pinyin" : "nan xiang lao jie",
     "addr" : "上海市-嘉定区-南翔镇解放街206号",
-    "describe" : [
+    "description" : [
       "老街离着古猗园不远，坐公交等了好久都没有，还是走过去更方便些。",
       "里面有许多好吃的，还有一些拍古装照片的，看着挺美的。感觉里面最美的还是檀园，檀园需要花门票，我们在网上买了套票，一共5个景点，后来才知道现在已经有几个点不需要门票了。",
       "檀园里面很大，像古代那种大家族的房子，有房屋，有长廊，还有古人弹琴的凉亭，会有穿越的感觉。"
@@ -75,25 +75,110 @@
   {
     "id" : 25,
     "img" : "/images/photo/maya/maya.jpeg",
-    "imgGroup" : [],
+    "imgGroup" : [
+      {
+        "name" : "门口",
+        "imgUrl" : "/images/photo/maya/menkou.jpeg"
+      },
+      {
+        "name" : "冲浪",
+        "imgUrl" : "/images/photo/maya/chonglang.jpeg"
+      },
+      {
+        "name" : "大喇叭",
+        "imgUrl" : "/images/photo/maya/dalaba.jpeg"
+      },
+      {
+        "name" : "人造海",
+        "imgUrl" : "/images/photo/maya/renzaohai.jpeg"
+      }
+    ],
     "name" : "玛雅水上乐园",
+    "pinyin" : "ma ya shui shang le yuan",
     "addr" : "上海市-松江区-林湖路888号",
+    "description" : [],
     "date" : 1529078400000
   },
   {
     "id" : 24,
     "img" : "/images/photo/shanghailishibowuguan/shanghailishibowuguan.jpeg",
-    "imgGroup" : [],
+    "imgGroup" : [
+      {
+        "name" : "轿子",
+        "imgUrl" : "/images/photo/shanghailishibowuguan/jiaozi.jpeg"
+      },
+      {
+        "name" : "古器展",
+        "imgUrl" : "/images/photo/shanghailishibowuguan/guqizhan.jpeg"
+      },
+      {
+        "name" : "书画展",
+        "imgUrl" : "/images/photo/shanghailishibowuguan/shuhuazhan.jpeg"
+      },
+      {
+        "name" : "画展",
+        "imgUrl" : "/images/photo/shanghailishibowuguan/huazhan.jpeg"
+      },
+      {
+        "name" : "老电影",
+        "imgUrl" : "/images/photo/shanghailishibowuguan/laodianying.jpeg"
+      },
+      {
+        "name" : "老爷车",
+        "imgUrl" : "/images/photo/shanghailishibowuguan/laoyeche.jpeg"
+      },
+      {
+        "name" : "电报机",
+        "imgUrl" : "/images/photo/shanghailishibowuguan/dianbaoji.jpeg"
+      }
+    ],
     "name" : "上海历史博物馆",
+    "pinyin" : "shang hai li shi bo wu guan",
     "addr" : "上海市-黄浦区-南京西路325号",
+    "description" : [],
     "date" : 1527955200000
   },
   {
     "id" : 23,
     "img" : "/images/photo/shanghaihaiyangshuizuguan/shanghaihaiyangshuizuguan.jpeg",
-    "imgGroup" : [],
+    "imgGroup" : [
+      {
+        "name" : "门口",
+        "imgUrl" : "/images/photo/shanghaihaiyangshuizuguan/menkou.jpeg"
+      },
+      {
+        "name" : "鲨鱼",
+        "imgUrl" : "/images/photo/shanghaihaiyangshuizuguan/shayu.jpeg"
+      },
+      {
+        "name" : "鳄鱼",
+        "imgUrl" : "/images/photo/shanghaihaiyangshuizuguan/eyu.jpeg"
+      },
+      {
+        "name" : "企鹅",
+        "imgUrl" : "/images/photo/shanghaihaiyangshuizuguan/qie.jpeg"
+      },
+      {
+        "name" : "水母",
+        "imgUrl" : "/images/photo/shanghaihaiyangshuizuguan/shuimu.jpeg"
+      },
+      {
+        "name" : "鱼",
+        "imgUrl" : "/images/photo/shanghaihaiyangshuizuguan/yu.jpeg"
+      },
+      {
+        "name" : "海马",
+        "imgUrl" : "/images/photo/shanghaihaiyangshuizuguan/haima.jpeg"
+      },
+      {
+        "name" : "隧道鲨鱼",
+        "imgUrl" : "/images/photo/shanghaihaiyangshuizuguan/suidaoshayu.jpeg"
+      }
+    ],
     "name" : "上海海洋水族馆",
+    "pinyin" : "shang hai hai yang shui zu guan",
     "addr" : "上海市-浦东新区-陆家嘴环路1388号",
+    "description" : [],
     "date" : 1527868800000
   },
   {
@@ -101,7 +186,9 @@
     "img" : "/images/photo/taiwushixiaozhen/taiwushixiaozhen.jpeg",
     "imgGroup" : [],
     "name" : "泰晤士小镇",
+    "pinyin" : "tai wu shi xiao zhen",
     "addr" : "上海市-松江区-三新北路900弄230号",
+    "description" : [],
     "date" : 1525104000000
   },
   {
@@ -109,7 +196,9 @@
     "img" : "/images/photo/shanghaiyingshileyuan/shanghaiyingshileyuan.jpeg",
     "imgGroup" : [],
     "name" : "上海影视乐园",
+    "pinyin" : "shang hai ying shi le yuan",
     "addr" : "上海市-松江区-车墩镇北松公路4915号",
+    "description" : [],
     "date" : 1520697600000
   },
   {
@@ -117,7 +206,9 @@
     "img" : "/images/photo/hangzhouleyuan/hangzhouleyuan.jpeg",
     "imgGroup" : [],
     "name" : "杭州乐园",
+    "pinyin" : "hang zhou le yuan",
     "addr" : "杭州市-萧山区-风情大道2555号",
+    "description" : [],
     "date" : 1507219200000
   },
   {
@@ -125,7 +216,9 @@
     "img" : "/images/photo/hangzhouxihu/hangzhouxihu.jpeg",
     "imgGroup" : [],
     "name" : "杭州西湖",
+    "pinyin" : "hang zhou xi hu",
     "addr" : "杭州市-西湖区-龙井路",
+    "description" : [],
     "date" : 1507132800000
   },
   {
@@ -133,7 +226,9 @@
     "img" : "/images/photo/zhuzhoufangte/zhuzhoufangte.jpeg",
     "imgGroup" : [],
     "name" : "株洲方特",
+    "pinyin" : "zhu zhou fang te",
     "addr" : "株洲市-石峰区-株洲云龙示范区华强北路88号",
+    "description" : [],
     "date" : 1506960000000
   },
   {
@@ -141,7 +236,9 @@
     "img" : "/images/photo/juzizhou/juzizhou.jpeg",
     "imgGroup" : [],
     "name" : "橘子洲",
+    "pinyin" : "ju zi zhou",
     "addr" : "长沙市-岳麓区-橘子洲头2号",
+    "description" : [],
     "date" : 1506873600000
   },
   {
@@ -149,7 +246,9 @@
     "img" : "/images/photo/xiangtan/xiangtan.jpeg",
     "imgGroup" : [],
     "name" : "湘潭市博物馆",
+    "pinyin" : "xiang tan shi bo wu guan",
     "addr" : "湘潭市-岳塘区-湖湘东路西50米",
+    "description" : [],
     "date" : 1506787200000
   },
   {
@@ -157,7 +256,9 @@
     "img" : "/images/photo/luxungongyuan/luxungongyuan.jpeg",
     "imgGroup" : [],
     "name" : "鲁迅公园",
+    "pinyin" : "lu xun gong yuan",
     "addr" : "上海市-虹口区-四川北路2288号",
+    "description" : [],
     "date" : 1503763200000
   },
   {
@@ -165,7 +266,9 @@
     "img" : "/images/photo/1933laochangfang/1933laochangfang.jpeg",
     "imgGroup" : [],
     "name" : "1933老厂房",
+    "pinyin" : "lao chang fang",
     "addr" : "上海市-虹口区-溧阳路611号",
+    "description" : [],
     "date" : 1502294400000
   },
   {
@@ -173,7 +276,9 @@
     "img" : "/images/photo/tianzifang/tianzifang.jpeg",
     "imgGroup" : [],
     "name" : "田子坊",
+    "pinyin" : "tian zi fang",
     "addr" : "上海市-黄浦区-泰康路210弄",
+    "description" : [],
     "date" : 1500652800000
   },
   {
@@ -181,7 +286,9 @@
     "img" : "/images/photo/tangjiawaizi/tangjiawaizi.jpeg",
     "imgGroup" : [],
     "name" : "唐家崴子",
+    "pinyin" : "tang jia wai zi",
     "addr" : "吉林市-丰满区-唐家崴子",
+    "description" : [],
     "date" : 1495814400000
   },
   {
@@ -189,7 +296,9 @@
     "img" : "/images/photo/shanghaikejiguan/shanghaikejiguan.jpeg",
     "imgGroup" : [],
     "name" : "上海科技馆",
+    "pinyin" : "shang hai ke ji guan",
     "addr" : "上海市-浦东新区-世纪大道2000号",
+    "description" : [],
     "date" : 1494604800000
   },
   {
@@ -197,7 +306,9 @@
     "img" : "/images/photo/zhaojialou/zhaojialou.jpeg",
     "imgGroup" : [],
     "name" : "召稼楼",
+    "pinyin" : "zhao jia lou",
     "addr" : "上海市-闵行区-沈杜公路2059号",
+    "description" : [],
     "date" : 1494000000000
   },
   {
@@ -205,7 +316,9 @@
     "img" : "/images/photo/qibao/qibao.jpeg",
     "imgGroup" : [],
     "name" : "七宝",
+    "pinyin" : "qi bao",
     "addr" : "上海市-闵行区-青年路与横沥路交叉口",
+    "description" : [],
     "date" : 1493481600000
   },
   {
@@ -213,7 +326,9 @@
     "img" : "/images/photo/dongfangmingzhu/dongfangmingzhu.jpeg",
     "imgGroup" : [],
     "name" : "东方明珠",
+    "pinyin" : "dong fang ming zhu",
     "addr" : "上海市-浦东新区-世纪大道1号",
+    "description" : [],
     "date" : 1490371200000
   },
   {
@@ -221,7 +336,9 @@
     "img" : "/images/photo/xinchangguzhen/xinchangguzhen.jpeg",
     "imgGroup" : [],
     "name" : "新场古镇",
+    "pinyin" : "xin chang gu zhen",
     "addr" : "上海市-浦东新区-新场大街附近",
+    "description" : [],
     "date" : 1491667200000
   },
   {
@@ -229,7 +346,9 @@
     "img" : "/images/photo/yuyuan/yuyuan.jpeg",
     "imgGroup" : [],
     "name" : "豫园",
+    "pinyin" : "yu yuan",
     "addr" : "上海市-黄浦区-福佑路",
+    "description" : [],
     "date" : 1479484800000
   },
   {
@@ -237,7 +356,9 @@
     "img" : "/images/photo/waitan/waitan.jpeg",
     "imgGroup" : [],
     "name" : "外滩",
+    "pinyin" : "wai tan",
     "addr" : "上海市-黄浦区-中山东一路",
+    "description" : [],
     "date" : 1479484800000
   },
   {
@@ -245,7 +366,9 @@
     "img" : "/images/photo/shanghaihuanlegu/huanlegu.jpeg",
     "imgGroup" : [],
     "name" : "上海欢乐谷",
+    "pinyin" : "shang hai huan le gu",
     "addr" : "上海市-松江区-林湖路888号",
+    "description" : [],
     "date" : 1476460800000
   },
   {
@@ -253,7 +376,9 @@
     "img" : "/images/photo/panshi/guangbodianshifashetai.jpeg",
     "imgGroup" : [],
     "name" : "磐石市广播电视发射台",
+    "pinyin" : "guang bo dian shi fa she tai",
     "addr" : "磐石市",
+    "description" : [],
     "date" : 1444060800000
   },
   {
@@ -261,7 +386,9 @@
     "img" : "/images/photo/regao/regao.jpeg",
     "imgGroup" : [],
     "name" : "热高",
+    "pinyin" : "regao",
     "addr" : "抚顺市-望花区-高湾经济开发区高望路1号",
+    "description" : [],
     "date" : 1439827200000
   },
   {
@@ -269,7 +396,9 @@
     "img" : "/images/photo/huangjiahaiyang/huangjiahaiyang.jpeg",
     "imgGroup" : [],
     "name" : "皇家极地海洋世界",
+    "pinyin" : "huang jia ji di hai yang shi jie",
     "addr" : "抚顺市-望花区-高湾经济开发区高阳路3号",
+    "description" : [],
     "date" : 1439740800000
   }
 ]
