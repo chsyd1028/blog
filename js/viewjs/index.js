@@ -27,18 +27,33 @@ var vm = new Vue({
     },
     created : function () {
 
-        $.getJSON("././json/project.json", function (data){
-            projects = data;
-            vm.projectList = data;
-        });
-        $.getJSON("././json/photo.json", function (data){
-            photos = data;
-            vm.photoList = data;
-        });
-        $.getJSON("././json/me.json", function (data){
-            meAll = data;
-            vm.meList = data;
-        });
+        $.ajax({
+            CrossDomain : true,
+            type : "GET",
+            url : "http://localhost:8080/blog/project/projectList",
+            success : function (result) {
+                projects = result.data;
+                vm.projectList = result.data;
+            }
+        })
+        $.ajax({
+            CrossDomain : true,
+            type : "GET",
+            url : "http://localhost:8080/blog/photo/photoList",
+            success : function (result) {
+                photos = result.data;
+                vm.photoList = result.data;
+            }
+        })
+        $.ajax({
+            CrossDomain : true,
+            type : "GET",
+            url : "http://localhost:8080//blog/me/meList",
+            success : function (result) {
+                meAll = result.data;
+                vm.meList = result.data;
+            }
+        })
 
     },
     mounted : function () {

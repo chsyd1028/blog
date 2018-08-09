@@ -10,23 +10,34 @@ var vm = new Vue({
         }
     },
     created : function () {
-        var photoList;
-        $.getJSON("././json/photo.json", function (data){
-            photoList = data;
-        });
+        // var photoList;
+        // $.getJSON("././json/photo.json", function (data){
+        //     photoList = data;
+        // });
+        // var id = getQueryString("id");
+        //
+        // var interval = setInterval(function () {
+        //     if (photoList){
+        //         clearInterval(interval);
+        //
+        //         photoList.forEach(function (item, index, list) {
+        //             if (item.id == id){
+        //                 vm.photo = item;
+        //             }
+        //         })
+        //     }
+        // }, 500);
+
         var id = getQueryString("id");
 
-        var interval = setInterval(function () {
-            if (photoList){
-                clearInterval(interval);
-
-                photoList.forEach(function (item, index, list) {
-                    if (item.id == id){
-                        vm.photo = item;
-                    }
-                })
+        $.ajax({
+            CrossDomain : true,
+            type : "GET",
+            url : "http://localhost:8080/blog/photo/photoInfo/" + id,
+            success : function (result) {
+                vm.photo = result.data;
             }
-        }, 500);
+        })
     }
 
 });

@@ -5,14 +5,23 @@ var vm = new Vue({
         projectList : undefined
     },
     methods : {
-
+        getProjectList : getProjectList
     },
     created : function () {
-        $.getJSON("././json/project.json", function (data){
-            vm.projectList = data;
-        });
+        getProjectList();
     }
 });
+
+function getProjectList() {
+    $.ajax({
+        CrossDomain : true,
+        type : "GET",
+        url : "http://localhost:8080/blog/project/projectList",
+        success : function (result) {
+            vm.projectList = result.data;
+        }
+    })
+}
 
 
 

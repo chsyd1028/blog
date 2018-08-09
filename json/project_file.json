@@ -1,14 +1,63 @@
 [
   {
+    "id" : 4,
+    "name" : "购物车",
+    "englishHeadlines" : "Shopping Cart",
+    "content" : [
+      "这是我做的一个简单的购物车，花了半天的时间，多数都卡在的前端上，后台还是蛮好做的。",
+      "数据库上用的是最简单的几个字段，id，name商品名，img图片，价格。不过里面的图片和名字都是我用的自己七牛云中的图片，额，有点不搭调，不过懂了就好，就好。",
+      "首先我先做了一个展示界面，用java的Pageinfo做分页，页面上的控件用的是bootstrap，数据渲染使用的是vue，第一个页面中主要实现的就是添加购物车的功能，点击添加购物车之后，会把商品的id存到redis中（redis的key是主要根据用户id分辨的），因为这里没有做登陆的东西，所以用户的id是写死的。根据这个字符串，就可以展示购物车里有几个商品。",
+      "第二个页面是购物车界面，可以展示这个用户购物车里的东西，每个东西也可以加或减个数，或者删除某个物品删除掉所有的redis中的这个id，同时即时统计数量和价格，还有清空购物车删除掉所有商品。",
+      "总的来说，这个功能的后台逻辑还是蛮简单的，不过卡在了前端控件和逻辑上久了点，bootstrap的用法还不是很熟。中间我的redis还炸了会，还有导出war包也不记得了，搞了好久好久，总算平安上线。"
+    ],
+    "imgGroup" : [
+      {
+        "title" : "列表展示",
+        "path" : "/images/project/shop/liebiaozhanshi.png"
+      },
+      {
+        "title" : "添加购物车",
+        "path" : "/images/project/shop/tianjiagouwuche.png"
+      },
+      {
+        "title" : "购物车展示",
+        "path" : "/images/project/shop/gouwuchezhanshi.png"
+      },
+      {
+        "title" : "统计与清空",
+        "path" : "/images/project/shop/tongjiyuqingkong.png"
+      }
+
+    ],
+    "url" : "http://csyd.xyz/shop",
+    "git" : "https://github.com/chsyd1028/shop",
+    "materials" : [
+      {
+        "title" : "SpringBoot使用Gradle构建war包的步骤",
+        "url" : "https://blog.csdn.net/KingBoyWorld/article/details/75244769"
+      }
+    ],
+    "date" : 1533588308000,
+    "cate" : "java",
+    "skill" : [
+      "SpringBoot",
+      "SpringMvc",
+      "Mybatis",
+      "Redis",
+      "bootstrap",
+      "vue"
+    ]
+  },
+  {
     "id" : 3,
-    "title" : "微信订阅号：耘楼",
-    "EnglishHeadlines" : "WeChat subscription number",
+    "name" : "微信订阅号：耘楼",
+    "englishHeadlines" : "WeChat subscription number",
     "content" : [
       "这是我申请的一个个人订阅号，没有进行认证，通过开发模式进行回复和菜单编辑等",
       "由于没有认证，多数接口无法使用，因此部分功能在测试号可查。",
       "微信的服务器地址需要使用外网的80端口，最初这部分我是使用的男票用花生壳搞得外网穿透，他是用一个小破手机做服务器，利用路由器进行外网穿透，具体内容他用蚂蚁笔记记下了，但是用他的小手机的缺点就是性能太差，我就使用了我自己的一台不用的笔记本作为服务器进行外网穿透。但是这样也有缺点，就是需要一直开机才可以一直访问。这一次，我们两个决定统一使用亚马逊aws服务器，这个服务器只要淘宝上不到十块钱买个VISA号，就可以免费用一年，没办法，穷人只能各种搞。"
     ],
-    "img" : [
+    "imgGroup" : [
       {
         "title" : "公众号二维码",
         "path" : "/images/project/wx/gongzhonghao.jpg"
@@ -43,13 +92,13 @@
   },
   {
     "id" : 2,
-    "title" : "影视搜索",
-    "EnglishHeadlines" : "Film and television search",
+    "name" : "影视搜索",
+    "englishHeadlines" : "Film and television search",
     "content" : [
       "本应用是为了学习《精通Spring MVC4》 一书第二章做的练习，书中例子是用推特的api调用数据，我们需要vpn比较麻烦，因此在网上找了一个免费的api。",
       "这是一个不成熟的影视搜索，利用聚合的免费api（坑的一比的api）搜索电影的信息。由于是一个免费的api，限制有很多，比如说必须精确搜索电影名称，每天只能搜索规定的次数，查询的数据也是比较老的数据。但是是为了练习springmvc的项目，勉强可以用"
     ],
-    "img" : [
+    "imgGroup" : [
       {
         "title" : "搜索界面",
         "path" : "/images/project/movie/sousuo.png"
@@ -80,13 +129,13 @@
   },
   {
     "id" : 1,
-    "title" : "oa系统",
-    "EnglishHeadlines" : "Office automation system",
+    "name" : "oa系统",
+    "englishHeadlines" : "Office automation system",
     "content" :[
       "这个是男票的毕业设计，和男票一起搭建，编写。主要采用的是springboot + springmvc + mybatis + gradle + vue的框架。前端页面是用的AmazeUI的官方模板。",
       "这里我主要学习应用的是shiro，在springboot下，所有的shiro分配都写在@Bean注解中，更简洁明了。"
     ],
-    "img" : [
+    "imgGroup" : [
       {
         "title" : "登陆",
         "path" : "/images/project/oa/denglu.png"

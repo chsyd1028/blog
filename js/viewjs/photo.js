@@ -11,9 +11,14 @@ var vm = new Vue({
 
     },
     created : function () {
-        $.getJSON("././json/photo.json", function (data){
-            vm.photoList = data;
-        });
+        $.ajax({
+            CrossDomain : true,
+            type : "GET",
+            url : "http://localhost:8080/blog/photo/photoList",
+            success : function (result) {
+                vm.photoList = result.data;
+            }
+        })
     }
 });
 

@@ -11,23 +11,30 @@ var vm = new Vue({
     },
     created : function () {
         var projectList;
-        $.getJSON("././json/project_file.json", function (data){
-            projectList = data;
-        });
+
         var id = getQueryString("id");
 
-        var interval = setInterval(function () {
-            if (projectList){
-                clearInterval(interval);
-
-                projectList.forEach(function (item, index, list) {
-                    if (item.id == id){
-                        vm.project = item;
-                        vm.id = id;
-                    }
-                })
+        $.ajax({
+            CrossDomain : true,
+            type : "GET",
+            url : "http://localhost:8080/blog/project/projectInfo/" + id,
+            success : function (result) {
+                vm.project = result.data;
             }
-        }, 500);
+        })
+
+        // var interval = setInterval(function () {
+        //     if (projectList){
+        //         clearInterval(interval);
+        //
+        //         projectList.forEach(function (item, index, list) {
+        //             if (item.id == id){
+        //                 vm.project = item;
+        //                 vm.id = id;
+        //             }
+        //         })
+        //     }
+        // }, 500);
     }
 
 });

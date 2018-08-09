@@ -122,8 +122,8 @@
                     <span>{{formatDate(photo.date,'Y.m.d')}}</span>
                  </div>
                  <p style="height: 60px"><i class="fa fa-map-marker" aria-hidden="true"></i> {{photo.addr}}</p>
-                 <a v-if="photo.imgGroup.length != 0 && photo.imgGroup != null" v-bind:href="'single-photo.html?id=' + photo.id" class="btn btn-default">详情</a>
-                 <a v-else class="btn btn-default" disabled="disabled">暂无</a>
+                 <a v-bind:href="'single-photo.html?id=' + photo.id" class="btn btn-default">详情</a>
+                 <!--<a v-else class="btn btn-default" disabled="disabled">暂无</a>-->
             </div>
         </div>
 
