@@ -16,7 +16,7 @@ function getProjectList() {
     $.ajax({
         CrossDomain : true,
         type : "GET",
-        url : "http://localhost:8080/blog/project/projectList",
+        url : requestAddr +  "blog/project/projectList",
         success : function (result) {
             vm.projectList = result.data;
         }

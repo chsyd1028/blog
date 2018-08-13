@@ -24,7 +24,7 @@ function getMeList() {
     $.ajax({
         CrossDomain : true,
         type : "GET",
-        url : "http://localhost:8080/blog/me/meList",
+        url : requestAddr + "blog/me/meList",
         success : function (result) {
             vm.meList = result.data;
         }

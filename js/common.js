@@ -1,5 +1,9 @@
 var imageUrl = "http://pc9t1l6wc.bkt.clouddn.com"
 
+//var requestAddr = "http://localhost:8080/"
+
+var requestAddr = "./"
+
 /*
 ** 时间戳转换成指定格式日期
 ** eg.

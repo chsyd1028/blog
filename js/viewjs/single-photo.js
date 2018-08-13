@@ -33,7 +33,7 @@ var vm = new Vue({
         $.ajax({
             CrossDomain : true,
             type : "GET",
-            url : "http://localhost:8080/blog/photo/photoInfo/" + id,
+            url : requestAddr + "blog/photo/photoInfo/" + id,
             success : function (result) {
                 vm.photo = result.data;
             }

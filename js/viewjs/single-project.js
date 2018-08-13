@@ -17,7 +17,7 @@ var vm = new Vue({
         $.ajax({
             CrossDomain : true,
             type : "GET",
-            url : "http://localhost:8080/blog/project/projectInfo/" + id,
+            url : requestAddr + "blog/project/projectInfo/" + id,
             success : function (result) {
                 vm.project = result.data;
             }

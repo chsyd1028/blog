@@ -30,7 +30,7 @@ var vm = new Vue({
         $.ajax({
             CrossDomain : true,
             type : "GET",
-            url : "http://localhost:8080/blog/project/projectList",
+            url : requestAddr + "blog/project/projectList",
             success : function (result) {
                 projects = result.data;
                 vm.projectList = result.data;
@@ -39,7 +39,7 @@ var vm = new Vue({
         $.ajax({
             CrossDomain : true,
             type : "GET",
-            url : "http://localhost:8080/blog/photo/photoList",
+            url : requestAddr + "blog/photo/photoList",
             success : function (result) {
                 photos = result.data;
                 vm.photoList = result.data;
@@ -48,7 +48,7 @@ var vm = new Vue({
         $.ajax({
             CrossDomain : true,
             type : "GET",
-            url : "http://localhost:8080//blog/me/meList",
+            url : requestAddr + "blog/me/meList",
             success : function (result) {
                 meAll = result.data;
                 vm.meList = result.data;
