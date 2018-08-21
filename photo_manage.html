@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <!-- Site title
+   ================================================== -->
+    <title>程杉耘朵 - 路上的风景</title>
+
+    <link rel="icon" type="image/png" href="http://pc9t1l6wc.bkt.clouddn.com/images/common/favicon.ico">
+
+
+    <!-- Bootstrap CSS
+   ================================================== -->
+    <link rel="stylesheet" href="http://pc9t1l6wc.bkt.clouddn.com/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://pc9t1l6wc.bkt.clouddn.com/css/bootstrap-datetimepicker.min.css">
+
+
+
+
+    <!-- Animate CSS
+   ================================================== -->
+    <link rel="stylesheet" href="http://pc9t1l6wc.bkt.clouddn.com/css/animate.min.css">
+
+    <!-- Font Icons CSS
+   ================================================== -->
+    <link rel="stylesheet" href="http://pc9t1l6wc.bkt.clouddn.com/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://pc9t1l6wc.bkt.clouddn.com/css/ionicons.min.css">
+
+    <!-- Main CSS
+   ================================================== -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google web font
+   ================================================== -->
+    <!--<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,300' rel='stylesheet' type='text/css'>-->
+
+</head>
+<body>
+
+
+<!-- Preloader section
+================================================== -->
+<div class="preloader">
+
+    <div class="sk-spinner sk-spinner-pulse"></div>
+
+</div>
+
+
+<!-- Navigation section
+================================================== -->
+<div class="nav-container">
+    <nav class="nav-inner transparent">
+
+        <div class="navbar">
+            <div class="container">
+                <div class="row">
+
+                    <div class="brand">
+                        <a href="index.html">程杉耘朵</a>
+                    </div>
+
+                    <div class="navicon">
+                        <div class="menu-container">
+
+                            <div class="circle dark inline">
+                                <i class="icon ion-navicon"></i>
+                            </div>
+
+                            <div class="list-menu">
+                                <i class="icon ion-close-round close-iframe"></i>
+                                <div class="intro-inner">
+                                    <ul id="nav-menu">
+                                        <li><a href="index.html">主页</a></li>
+                                        <li><a href="project.html">小程序</a></li>
+                                        <li><a href="photo.html">路上的风景</a></li>
+                                        <li><a href="me.html">关于我</a></li>
+                                        <li><a href="contact.html">联系方式</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </nav>
+</div>
+
+<div id="photo_detail">
+    <section id="header" class="header-four">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8">
+                    <div class="header-thumb">
+                        <h1 class="wow fadeIn" data-wow-delay="0.6s">游历编辑</h1>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Single Post section
+    ================================================== -->
+    <section id="photo_manage">
+
+
+        <div style="margin: 5% 10% 10%;">
+            <form class="form-horizontal">
+                <div class="form-group form-group-lg">
+                    <label class="col-sm-2 control-label" >地点名称</label>
+                    <div class="col-sm-10">
+                        <input class="form-control" type="text" v-model="photoForm.name">
+                    </div>
+                </div>
+                <div class="form-group form-group-lg">
+                    <label class="col-sm-2 control-label" >时间</label>
+                    <div class="col-sm-10">
+                        <input size="16" type="text" class="form_datetime form-control" id="photo_date" v-model="formatDate(photoForm.date)">
+                    </div>
+                </div>
+                <div class="form-group form-group-lg">
+                    <label class="col-sm-2 control-label" >地点拼音</label>
+                    <div class="col-sm-10">
+                        <input class="form-control" type="text" v-model="photoForm.pinyin">
+                    </div>
+                </div>
+                <div class="form-group form-group-lg">
+                    <label class="col-sm-2 control-label" >位置</label>
+                    <div class="col-sm-10">
+                        <input class="form-control" type="text" v-model="photoForm.addr">
+                    </div>
+                </div>
+                <div class="form-group form-group-lg">
+                    <label class="col-sm-2 control-label" >描述</label>
+                    <div class="col-sm-10">
+                        <textarea class="form-control" v-model="photoForm.description" rows="10"></textarea>
+                    </div>
+                </div>
+                <div class="form-group form-group-lg">
+                    <label class="col-sm-2 control-label" >首页图片位置</label>
+                    <div class="col-sm-10">
+                        <input class="form-control" type="text" v-model="photoForm.img">
+                    </div>
+                </div>
+                <div class="form-group form-group-lg">
+                    <label class="col-sm-2 control-label" >内容图片位置</label>
+                    <div class="col-sm-10">
+                            <div class="row" style="margin-left: 3%" v-for="(item, index) in photoForm.imgGroup">
+                                <div class="form-group col-sm-2 form-group-lg">
+                                    <input type="text" class="form-control" placeholder="标题" v-model="item.name" :disabled="item.id != null">
+                                </div>
+                                <div class="form-group col-sm-8 form-group-lg">
+                                    <input type="text" class="form-control" style="margin-left: 3%" placeholder="位置" v-model="item.imgUrl" :disabled="item.id != null">
+                                </div>
+                                <div class="col-xm-2" >
+                                    <a class="btn" style="margin-top: 0px" v-on:click="deleteImg(index)">
+                                        <i class="fa fa-minus fa-2x" aria-hidden="true"></i>
+                                    </a>
+                                    <a class="btn" style="margin-top: 0px" v-on:click="addImg" v-if="index == photoForm.imgGroup.length-1">
+                                        <i class="fa fa-plus fa-2x" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                        <a class="btn" style="margin-top: 0px" v-on:click="addImg" v-if="photoForm.imgGroup.length == 0">
+                            <i class="fa fa-plus fa-2x" aria-hidden="true"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+                <div class="form-group form-group-lg">
+                    <label class="col-sm-2 control-label" ></label>
+                    <div class="col-sm-10 ">
+                        <a href="#" class="btn btn-default " style="color: #111112" data-toggle="modal" data-target="#myModal">保存</a>
+                    </div>
+
+                </div>
+            </form>
+
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="myModalLabel">权限校验</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form class="form-horizontal">
+                                <div class="form-group form-group-lg">
+                                    <label class="col-sm-2 control-label" >用户名</label>
+                                    <div class="col-sm-10">
+                                        <input class="form-control" type="text" v-model="username">
+                                    </div>
+                                </div>
+                                <div class="form-group form-group-lg">
+                                    <label class="col-sm-2 control-label" >密码</label>
+                                    <div class="col-sm-10">
+                                        <input class="form-control" type="password" v-model="password">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                            <button type="button" class="btn btn-primary" v-on:click="savePhoto">登陆</button>
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal -->
+            </div>
+
+
+            <!--<textarea v-model="message" placeholder="add multiple lines"></textarea>-->
+
+        </div>
+    </section>
+
+</div>
+
+<!-- Footer section
+================================================== -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7 col-sm-7">
+                <p class="wow fadeInUp"  data-wow-delay="0.3s">
+                    <img src="http://pc9t1l6wc.bkt.clouddn.com/images/common/footer.png" style="width: 630px">
+                </p>
+                <p>友情链接： <a href="http://tczmh.club/" target="_blank" title="tczmh - 个人博客">tczmh - 个人博客</a></p>
+            </div>
+            <div class="col-md-5 col-sm-5">
+                <ul id="contact_ul">
+                    <li class="fa fa-github"><a href="https://github.com/chsyd1028" target="_blank">https://github.com/chsyd1028</a ></li>
+                    <li class="fa fa-pencil-square-o"><a href="http://blog.csdn.net/chsyd1028" target="_blank">http://blog.csdn.net/chsyd1028</a ></li>
+                    <li class="fa fa-envelope-o"><a>chengshanyunduo@foxmail.com</a ></li>
+                    <li class="fa fa-qq"><a>420120577</a ></li>
+                    <li class="fa fa-wechat"><a>420120577</a ></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Javascript
+================================================== -->
+<script src="http://pc9t1l6wc.bkt.clouddn.com/js/jquery.js"></script>
+<script src="http://pc9t1l6wc.bkt.clouddn.com/js/bootstrap.min.js"></script>
+<script src="http://pc9t1l6wc.bkt.clouddn.com/js/bootstrap-datetimepicker.js"></script>
+<script src="http://pc9t1l6wc.bkt.clouddn.com/js/vue.js"></script>
+<script src="js/common.js"></script>
+<script src="js/viewjs/photo_manage.js"></script>
+<script src="http://pc9t1l6wc.bkt.clouddn.com/js/wow.min.js"></script>
+<script src="js/custom.js"></script>
+
+
+
+</body>
+</html>

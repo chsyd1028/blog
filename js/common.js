@@ -53,3 +53,13 @@ function getQueryString(name) {
     if (r != null) return unescape(r[2]);
     return null;
 }
+
+function alert(e){
+    $("body").append("<div id='msg'><span>"+e+"</span></div>");
+    clearmsg();
+}
+function clearmsg(){
+    var t = setTimeout(function(){
+        $("#msg").remove();
+    },2000)
+};

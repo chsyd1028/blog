@@ -124,12 +124,12 @@
 		<div class="wow fadeInUp col-md-6 col-sm-12" data-wow-delay="1.6s">
 			<h1>耘客栈留言簿</h1>
 			<div class="contact-form">
-				<form id="contact-form" method="post" action="#">
-					<input name="name" type="text" class="form-control" placeholder="客观贵姓" required>
-					<input name="email" type="email" class="form-control" placeholder="驿站何处" required>
-					<textarea name="message" class="form-control" placeholder="有何指教" rows="4" required></textarea>
+				<form id="contact-form" method="post" action="#" @submit.prevent="submit">
+					<input name="name" type="text" class="form-control" placeholder="客观贵姓" required v-model="name">
+					<input name="email" type="email" class="form-control" placeholder="驿站何处(email或电话)" required v-model="email">
+					<textarea name="message" class="form-control" placeholder="有何指教" rows="4" required v-model="content"></textarea>
 					<div class="contact-submit">
-						<input type="submit" class="form-control submit" value="飞鸽传书">
+						<input type="submit" class="form-control submit" value="飞鸽传书" >
 					</div>
 				</form>
 			</div>
@@ -207,7 +207,10 @@
 <script src="http://pc9t1l6wc.bkt.clouddn.com/js/jquery.js"></script>
 <script src="http://pc9t1l6wc.bkt.clouddn.com/js/bootstrap.min.js"></script>
 <script src="http://pc9t1l6wc.bkt.clouddn.com/js/wow.min.js"></script>
+<script src="http://pc9t1l6wc.bkt.clouddn.com/js/vue.js"></script>
+<script src="js/common.js"></script>
 <script src="js/custom.js"></script>
+<script src="js/viewjs/contact.js"></script>
 
 </body>
 </html>
