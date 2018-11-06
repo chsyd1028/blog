@@ -1,4 +1,4 @@
-var imageUrl = "http://pc9t1l6wc.bkt.clouddn.com"
+var imageUrl = "https://csyd.nos-eastchina1.126.net"
 
 //var requestAddr = "http://localhost:8080/"
 
